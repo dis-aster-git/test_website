@@ -1,0 +1,22 @@
+{% load static %}
+<html>
+    <head>
+        <title>NEWS</title>
+    </head>
+    <body>
+        {% for post in posts %}
+
+        <div>
+            <h1>>{{ post.title }}</h1>
+        </div>
+
+            <div>
+                <p>{{ post.photo.url }}</p>
+                <img src="{{ post.photo.url }}" />
+                <p>{{ post.text|linebreaksbr }}</p>
+                <p>Published: {{ post.created_date }}</p>
+                <p>Author: {{ post.author }}</p>
+            </div>
+        {% endfor %}
+    </body>
+</html>
