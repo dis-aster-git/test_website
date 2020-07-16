@@ -12,6 +12,7 @@ urlpatterns = [
     path('tech', views.tech, name='tech'),
     path('news', views.news, name='news'),
     path('error', views.error, name='error'),
+    path('home_jp', views.home_jp, name='home_jp'),
 ]
 
 if settings.DEBUG: # new

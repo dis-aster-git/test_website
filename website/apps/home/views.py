@@ -30,3 +30,6 @@ def error(request):
 def news(request):
     posts = Post.objects.filter(created_date__lte=timezone.now()).order_by('created_date')
     return render(request, 'home/news.html',  {'posts': posts})
+
+def home_jp(request):
+    return render(request, 'home/index_jp.html', {})
