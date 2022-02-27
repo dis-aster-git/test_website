@@ -1,145 +1,123 @@
 {% load static %}
 <link rel="icon" href="{% static 'images/logo.png' %}">
-<html>
-	<head>
-		<title>NEWS @ ASTER</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="{% static 'css/main.css' %}" />
-		<noscript><link rel="stylesheet" href="{% static 'css/noscript.css' %}" /></noscript>
-	</head>
-	<body class="is-preload">
-
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>News</title>
+	<link rel="stylesheet" href="{% static 'css/nicepage.css' %}" />
+	<link rel="stylesheet" href="{% static 'css/Home.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <noscript><link rel="stylesheet" href="{% static 'css/noscript.css' %}" /></noscript>
+    <meta name="generator" content="Nicepage 4.5.4, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i">
+    
+  </head>
+  
+ <body style="background-color:#000000;">
 		<!-- Wrapper -->
 			<div id="wrapper">
 
 				<!-- Header -->
-					<header id="header" class="alt">
+				<!-- Note: The "styleN" class below should match that of the banner element. -->
+					<header id="header" class="alt style2">
 						<a href="{% url 'home' %}" class="logo">
 						<img src="{% static 'images/logo1.png' %}" alt="logo" style="width:95px;height:50px;"> 
-						 </a>
+						</a>
 						<nav>
-						<nav>
-							<a href="#menu">Menu</a>
+						<!-- <a href="{% url 'team_jp' %}"style="color: #ffffff">日本語</a> -->
+							<a href="#menu"style="color: #ffffff">Menu</a>
 						</nav>
 					</header>
 
 				<!-- Menu -->
-				<nav id="menu">
-					<ul class="links">
-						<li><a href="{% url 'home' %}">HOME</a></li>
-						<li><a href="{% url 'about' %}">ABOUT US</a></li>
-						<li><a href="{% url 'tech' %}">OUR TECHNOLOGY</a></li>
-						<li><a href="{% url 'team' %}">OUR TEAM</a></li>
-						<li><a href="#contact">CONTACT US</a></li>
-						<li><a href="{% url 'support' %}">SUPPORT OUR CAUSE</a></li>
-					</ul>
-					<ul class="actions stacked">
-						<li><a href="{% url 'error' %}" class="button fit">Log In</a></li>
-					</ul>
-				</nav>
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="{% url 'home' % }"style="color: #ffffff">HOME</a></li>
+							<li><a href="{% url 'about' %}"style="color: #ffffff">ABOUT US</a></li>
+							<li><a href="{% url 'tech' %}"style="color: #ffffff">OUR TECHNOLOGY</a></li>
+							<li><a href="{% url 'team' %}"style="color: #ffffff">OUR TEAM</a></li>
+							<li><a href="{% url 'overview' %}"style="color: #ffffff">COMPANY OVERVIEW</a></li>
+							<li><a href="#contact"style="color: #ffffff">CONTACT US</a></li>
+							<li><a href="{% url 'error' %}"style="color: #ffffff">SUPPORT OUR CAUSE</a></li>
+						</ul>
+						<ul class="actions stacked">
+							<li><a href="{% url 'error' %}" class="button fit"style="color: #ffffff">Log In</a></li>
+						</ul>
+					</nav>
+		</div>
 
-
-				<!-- Main -->
-				{% for post in posts %}
-					<div id="main" class="alt">
-
-						<!-- One -->
-							<section id="one">
-								<div class="inner">
-									<header class="major">
-										<h1>{{ post.title }}</h1>
-									</header>
-									
-									<span class="image main">
-									<div style="text-align:center"> 
-									<!-- <iframe width="700" height="420" src={{ post.photo.url }} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-									<img src="{{ post.photo.url }}" />
-										</div>	</span>									
-									<p><strong>
-									{{ post.text|linebreaksbr }}</p>
-									</strong>
-									<p>Published: {{ post.created_date }}</p>
-									<p>Author: {{ post.author }}</p>
-									</div>
-							</section>
-
+  <body class="u-body u-xl-mode">
+    <section id="carousel_591a" class="u-carousel u-slide u-valign-middle u-block-18c8-1" data-u-ride="carousel" data-interval="5000">
+      <ol class="u-absolute-hcenter u-carousel-indicators u-block-18c8-2">
+        <li data-u-target="#carousel_591a" class="u-active u-grey-30" data-u-slide-to="0"></li>
+        <li data-u-target="#carousel_591a" class="u-grey-30" data-u-slide-to="1"></li>
+      </ol>
+      <div class="u-carousel-inner" role="listbox">
+	  {% for post in posts %}
+	  {% if forloop.counter == 1 %}
+      <div class="u-active u-black u-carousel-item u-clearfix u-section-1-1">
+	 {% else %}
+	 <div class="u-black u-carousel-item u-clearfix u-section-1-2">
+	 {% endif %}
+	 
+          <div class="u-clearfix u-sheet u-sheet-1">
+            <div class="u-clearfix u-expanded-width u-gutter-10 u-layout-wrap u-layout-wrap-1">
+              <div class="u-layout" style="">
+                <div class="u-layout-row" style="">
+                  <div class="u-align-left u-container-style u-image u-layout-cell u-left-cell u-size-30 u-size-xs-60 u-image-1" src="">
+						<span class="background-image">
+							<img src="{{ post.photo.url }}" alt={{ post.title }} width="600" data-position="center">
+						</span>
+					<div class="u-container-layout u-valign-middle u-container-layout-1" src="">
 					</div>
-					
-				{% endfor %}
-
-				<!-- Contact -->
-					<section id="contact">
-						<div class="inner">
-							<section>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input style="border: 2px solid #9bf1ff"type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input style="border: 2px solid #9bf1ff"type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea style="border: 2px solid #9bf1ff"name="message" id="message" rows="6"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Clear" /></li>
-									</ul>
-								</form>
-							</section>
-							<section class="split">
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-envelope"></span>
-										<h3>Email</h3>
-										<a href="#">information@aster.com</a>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-phone"></span>
-										<h3>Phone</h3>
-										<span>(080)12345678</span>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-home"></span>
-										<h3>Address</h3>
-										<span> 2-6-5 Yaesu, Chuo-ku, <br />
-										Tokyo 114-0028<br />
-										Japan</span>
-									</div>
-								</section>
-							</section>
-						</div>
-					</section>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<ul class="icons">
-								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-							</ul>
-							<ul class="copyright">
-								<li>&copy; Copyright © 2020 株式会社 Aster.</li>
-							</ul>
-						</div>
-					</footer>
-
-			</div>
-
+                  </div>
+                  <div class="u-container-style u-layout-cell u-right-cell u-size-30 u-size-xs-60 u-layout-cell-2">
+                    <div class="u-container-layout u-valign-middle u-container-layout-2">
+                      <h2 class="u-align-center u-custom-font u-font-merriweather u-text u-text-2">{{ post.title }}</h2>
+                      <p class="u-align-center u-text u-text-3">{{ post.text|linebreaksbr }}</p>
+                    <p class="u-align-left u-text u-text-3">Published: {{ post.created_date }}</p>
+                    <p class="u-align-left u-text u-text-3">Author: {{ post.author }}</p>
+					</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+		{% endfor %}
+		</div>
+	  {% for post in posts %}
+	  {% if forloop.counter == 1 %}
+      <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-text-body-alt-color u-block-18c8-3" href="#carousel_591a" role="button" data-u-slide="prev">
+        <span aria-hidden="true">
+          <svg viewBox="0 0 477.175 477.175"><path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225
+		c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"></path></svg>
+        </span>
+        <span class="sr-only">
+          <svg viewBox="0 0 477.175 477.175"><path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225
+		c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"></path></svg>
+        </span>
+      </a>
+	  {% else %}
+	        <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-text-body-alt-color u-block-18c8-4" href="#carousel_591a" role="button" data-u-slide="next">
+        <span aria-hidden="true">
+          <svg viewBox="0 0 477.175 477.175"><path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5
+		c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z"></path></svg>
+        </span>
+        <span class="sr-only">
+          <svg viewBox="0 0 477.175 477.175"><path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5
+		c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z"></path></svg>
+        </span>
+      </a>
+	  {% endif %}
+	  {% endfor %}
+    </section>
+    
 		<!-- Scripts -->
+		<script src="{% static 'js/jquery.js' %}"></script>
+		<script src="{% static 'js/nicepage.js' %}"></script>
 		<script src="{% static 'js/jquery.min.js' %}"></script>
 		<script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
 		<script src="{% static 'js/jquery.scrollex.min.js' %}"></script>
@@ -147,6 +125,5 @@
 		<script src="{% static 'js/breakpoints.min.js' %}"></script>
 		<script src="{% static 'js/util.js' %}"></script>
 		<script src="{% static 'js/main.js' %}"></script>
-
-	</body>
+  </body>
 </html>

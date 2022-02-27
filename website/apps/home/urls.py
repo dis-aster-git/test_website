@@ -10,9 +10,14 @@ urlpatterns = [
     path('support', views.support, name='support'),
     path('team', views.team, name='team'),
     path('tech', views.tech, name='tech'),
+    path('overview', views.overview, name='overview'),
     path('news', views.news, name='news'),
     path('error', views.error, name='error'),
     path('home_jp', views.home_jp, name='home_jp'),
+    path('about_jp', views.about_jp, name='about_jp'),
+    path('team_jp', views.team_jp, name='team_jp'),
+    path('tech_jp', views.tech_jp, name='tech_jp'),
+    path('overview_jp', views.overview_jp, name='overview_jp'),
 ]
 
 if settings.DEBUG: # new

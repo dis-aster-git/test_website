@@ -2,7 +2,7 @@
 <link rel="icon" href="{% static 'images/logo.png' %}">
 <html>
 	<head>
-		<title>ABOUT US</title>
+		<title>テクノロジー</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="{% static 'css/main.css' %}" />
@@ -20,24 +20,24 @@
 						<img src="{% static 'images/logo1.png' %}" alt="logo" style="width:95px;height:50px;"> 
 						</a>
 						<nav>
-						<a href="{% url 'about_jp' %}">日本語</a>
-							<a href="#menu">Menu</a>
+						<a href="{% url 'tech_jp' %}">ENG</a>
+							<a href="#menu">メニュー</a>
 						</nav>
 					</header>
 
 				<!-- Menu -->
 					<nav id="menu">
 						<ul class="links">
-							<li><a href="{% url 'home' %}">HOME</a></li>
-							<li><a href="{% url 'about' %}">ABOUT US</a></li>
-							<li><a href="{% url 'tech' %}">OUR TECHNOLOGY</a></li>
-							<li><a href="{% url 'team' %}">OUR TEAM</a></li>
-							<li><a href="{% url 'overview' %}">COMPANY OVERVIEW</a></li>
-							<li><a href="#contact">CONTACT US</a></li>
-							<li><a href="{% url 'error' %}">SUPPORT OUR CAUSE</a></li>
+							<li><a href="{% url 'home_jp' %}">ホーム</a></li>
+							<li><a href="{% url 'about_jp' %}">会社紹介</a></li>
+							<li><a href="{% url 'tech_jp' %}">テクノロジー</a></li>
+							<li><a href="{% url 'team_jp' %}">チーム</a></li>
+							<li><a href="{% url 'overview_jp' %}">会社概要</a></li>
+							<li><a href="#contact">お問い合わせ</a></li>
+							<li><a href="{% url 'error' %}">世界を守ろう</a></li>
 						</ul>
 						<ul class="actions stacked">
-							<li><a href="{% url 'error' %}" class="button fit">Log In</a></li>
+							<li><a href="{% url 'error' %}" class="button fit">ログイン</a></li>
 						</ul>
 					</nav>
 
@@ -46,10 +46,10 @@
 					<section id="banner" class="style2">
 						<div class="inner">
 							<span class="image">
-								<img src="{% static 'images/about_us.jpg' %}" alt="team" />
+								<img src="{% static 'images/paint.jpg' %}" alt="tech" />
 							</span>
 							<header class="major">
-								<h1>ABOUT US</h1>
+								<h1>解決方法</h1>
 							</header>
 							
 						</div>
@@ -62,50 +62,74 @@
 							<section id="one">
 								<div class="inner">
 									<header class="major">
-										<h2>Our Vision:</h2>
+										<h2>Our Solution:</h2>
 									</header>
-									<p>Creating a world where people can live safely without the fear of natural disaster</p>
-									<header class="major">
-										<h2>Our Mission:</h2>
-									</header>
-									<p>Striving for Zero earthquake victims</p>
+									<p>
+組積造を耐震補強するには2つの技術が必要です。一つは耐震設計、もう一つは補強技術（補強工法）です。
+①耐震設計は構造計算して現在の建物耐震性能を評価し、不足している耐震性能を明らかにします。次に建物のどの部分に、どの位の補強が必要か考慮して補強設計を行います。
+②補強技術は基本的に外壁に高強度樹脂をコーティングするだけです。繊維含有量と塗布厚によって引張強度や特性を調整できます。アクリルシリコン系樹脂を基材にしているので環境にも優しいです。各種の繊維と樹脂を分散混合してスラリーを作る基本技術を持っていますので用途やニーズに合わせて様々な製品の開発、製造も可能です。
 								</div>
 							</section>
 
 						<!-- Two -->
 							<section id="two" class="spotlights">
 								<section>
-									<a class="image">
-										<img src="{% static 'images/overview.jpg' %}" alt="" data-position="center center" />
+									<a href="generic.html" class="image">
+										<img src="{% static 'images/tech.jpg' %}" alt="" data-position="center center" />
 									</a>
 									<div class="content">
 										<div class="inner">
 											<header class="major">
-												<h3>What is Masonry?</h3>
+												<h3> Asterの強み </h3>
 											</header>
-											<p>
-										Masonry is considered as one of the oldest construction material and still the preferable construction material for buildings worldwide.
-										It is estimated that over 60% of the world's population live in buildings having some form of masonry. Masonry essentially consits of invidual blocks (bricks, rocks, CHB etc.) arranged together usually with an adhesive agent(mostly cement mortar) to form strutural units.</p>
+										<ul>
+										<li>Power Coatingの製造には高度な技術が必要ですが、使うのはとても簡単です。</li>
+										<li>Cost: 一般的な高強度性能の1/10~1/20</li>
 											<ul class="actions">
 												</ul>
 										</div>
 									</div>
 								</section>
-								<section>
-									<a class="image">
-										<img src="{% static 'images/masonry_problem.jpg' %}" alt="" data-position="top center" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>The problem:</h3>
-											</header>
-											<p>Although popular as a building material, masonry structures are extremely vulnerable to earthquakes if not designed/constructued properly. It is estimated that around 80% of earthquake victims over the last 100 years have been caused by collapse of masonry structures. Unlike Typhoons where a certain level of early warning is possible, the brittle collpase of masory structures happen all of a sudden when an earthquake occurs. At Aster we are striving towards solving this problem that haunts seismically vulnerable regions worldwide.</p>
-											<ul class="actions">
-												</ul>
-										</div>
-									</div>
-								</section>
+								<!-- <section> -->
+									<!-- <a class="image"> -->
+										<!-- <img src="{% static 'images/2.jpg' %}"  alt="" data-position="top center" /> -->
+									<!-- </a> -->
+									<!-- <div class="content"> -->
+										<!-- <div class="inner"> -->
+											<!-- <header class="major"> -->
+												<!-- <h3>BLA</h3> -->
+											<!-- </header> -->
+											<!-- <p> -->
+											<!-- ..................</p> -->
+											<!-- <ul class="actions"> -->
+												<!-- </ul> -->
+										<!-- </div> -->
+									<!-- </div> -->
+								<!-- </section> -->
+								
+							</section>
+
+						<!-- Three -->
+							<section id="three">
+								<div class="content">
+									<header class="major">
+										<h2>Video:</h2>
+								</div>
+								<div style="text-align:left"> 
+								<video width="750" height="600" controls>
+								  <source src="{% static 'video/Experiment.mp4' %}" type="video/mp4">
+								  <source src="{% static 'video/Experiment.webm' %}" type="video/webm">
+								  <source src="{% static 'video/Experiment.ogv' %}"
+								</video>
+								</div>
+								<a class="image">
+									<img src="{% static 'images/research_outcome.jpg' %}"  alt=""/>
+								</a>
+									
+
+							</section>
+
+					</div>
 
 				<!-- Contact -->
 					<section id="contact">
@@ -114,15 +138,15 @@
 								<form method="post" action="#">
 									<div class="fields">
 										<div class="field half">
-											<label for="name">Name</label>
+											<label for="name">氏名</label>
 											<input style="border: 2px solid #9bf1ff"type="text" name="name" id="name" />
 										</div>
 										<div class="field half">
-											<label for="email">Email</label>
+											<label for="email">メール</label>
 											<input style="border: 2px solid #9bf1ff"type="text" name="email" id="email" />
 										</div>
 										<div class="field">
-											<label for="message">Message</label>
+											<label for="message">メッセージ</label>
 											<textarea style="border: 2px solid #9bf1ff"name="message" id="message" rows="6"></textarea>
 										</div>
 									</div>
@@ -133,27 +157,27 @@
 								</form>
 							</section>
 							<section class="split">
-								<!-- <section> -->
+								<section>
 									<!-- <div class="contact-method"> -->
 										<!-- <span class="icon solid alt fa-envelope"></span> -->
 										<!-- <h3>Email</h3> -->
 										<!-- <a href="#">information@aster.com</a> -->
 									<!-- </div> -->
-								<!-- </section> -->
+								</section>
 								<section>
 									<div class="contact-method">
 										<span class="icon solid alt fa-phone"></span>
-										<h3>Phone</h3>
+										<h3>電話番号（代表）</h3>
 										<span>+81-(0)55-925-0063</span>
 									</div>
 								</section>
 								<section>
 									<div class="contact-method">
 										<span class="icon solid alt fa-home"></span>
-										<h3>Address</h3>
-										<span> 2-6-5 Yaesu, Chuo-ku, <br />
-										Tokyo 114-0028<br />
-										Japan</span>
+										<h3>所在地</h3>
+										<span> 〒114-0028 <br>東京都中央区八重洲2-6-5<br>
+										八重洲五の五ビル4F
+										</span>
 									</div>
 								</section>
 							</section>
@@ -177,7 +201,6 @@
 					</footer>
 
 			</div>
-
 
 		<!-- Scripts -->
 			<script src="{% static 'js/jquery.min.js' %}"></script>

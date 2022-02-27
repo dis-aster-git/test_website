@@ -2,7 +2,7 @@
 <link rel="icon" href="{% static 'images/logo.png' %}">
 <html>
 	<head>
-		<title>ABOUT US</title>
+		<title>Overview</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="{% static 'css/main.css' %}" />
@@ -20,7 +20,7 @@
 						<img src="{% static 'images/logo1.png' %}" alt="logo" style="width:95px;height:50px;"> 
 						</a>
 						<nav>
-						<a href="{% url 'about_jp' %}">日本語</a>
+						<a href="{% url 'overview_jp' %}">日本語</a>
 							<a href="#menu">Menu</a>
 						</nav>
 					</header>
@@ -46,10 +46,10 @@
 					<section id="banner" class="style2">
 						<div class="inner">
 							<span class="image">
-								<img src="{% static 'images/about_us.jpg' %}" alt="team" />
+								<img src="{% static 'images/overview.jpg' %}" alt="tech" />
 							</span>
 							<header class="major">
-								<h1>ABOUT US</h1>
+								<h1>COMPANY OVERVIEW</h1>
 							</header>
 							
 						</div>
@@ -62,51 +62,56 @@
 							<section id="one">
 								<div class="inner">
 									<header class="major">
-										<h2>Our Vision:</h2>
+										<h2>General Info:</h2>
 									</header>
-									<p>Creating a world where people can live safely without the fear of natural disaster</p>
-									<header class="major">
-										<h2>Our Mission:</h2>
-									</header>
-									<p>Striving for Zero earthquake victims</p>
+									<div class="row">
+									  <div class="column">
+									  <p>Company Name</p>
+									  <p>Established</p>
+									  <p>Head Office</p>
+									  <p>Shizuoka branch </p>
+									  <p>&ensp;</p>
+									  <p>Telephone</p>
+									  <p>Directors</p>
+									  <p>&ensp;</p>
+									  <p>Capital</p>
+									</div>
+									  <div class="column">
+									  <p>Aster Co.,Ltd.</p>
+									  <p>January 2019</p>
+									  <p>2-6-5 Yaesu, Chuo-ku, Tokyo 104-0028 Japan</p>
+									  <p>825-3　Oka-issiki, Numadu city, Shizuoka 410-0012 Japan</p>
+									  <p>※ Due to current pandemic we are working remotely at the Shizuoka branch</p>
+									  <p>055-925-0063</p>
+									  <p>CEO Masaomi Suzuki</p>
+									  <p>COO Shanthanu R. Menon</p>
+									  <p>9.99 million yen</p>
+									</div>
+									</div>
 								</div>
 							</section>
-
+					</div>
 						<!-- Two -->
-							<section id="two" class="spotlights">
-								<section>
-									<a class="image">
-										<img src="{% static 'images/overview.jpg' %}" alt="" data-position="center center" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>What is Masonry?</h3>
-											</header>
-											<p>
-										Masonry is considered as one of the oldest construction material and still the preferable construction material for buildings worldwide.
-										It is estimated that over 60% of the world's population live in buildings having some form of masonry. Masonry essentially consits of invidual blocks (bricks, rocks, CHB etc.) arranged together usually with an adhesive agent(mostly cement mortar) to form strutural units.</p>
-											<ul class="actions">
-												</ul>
-										</div>
-									</div>
-								</section>
-								<section>
-									<a class="image">
-										<img src="{% static 'images/masonry_problem.jpg' %}" alt="" data-position="top center" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>The problem:</h3>
-											</header>
-											<p>Although popular as a building material, masonry structures are extremely vulnerable to earthquakes if not designed/constructued properly. It is estimated that around 80% of earthquake victims over the last 100 years have been caused by collapse of masonry structures. Unlike Typhoons where a certain level of early warning is possible, the brittle collpase of masory structures happen all of a sudden when an earthquake occurs. At Aster we are striving towards solving this problem that haunts seismically vulnerable regions worldwide.</p>
-											<ul class="actions">
-												</ul>
-										</div>
-									</div>
-								</section>
-
+							<section id="two">
+								<div class="inner">
+									<header class="major">
+										<h2>Access:</h2>
+									</header>
+								<div>
+									<!-- Google Map Copied Code -->
+									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.969242080077!2d139.76622391520036!3d35.67775933776996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfcb2ad8683%3A0x448c6a245bd8f2d6!2z44CSMTA0LTAwMjggVG9reW8sIENodW8gQ2l0eSwgWWFlc3UsIDItY2jFjW1l4oiSNuKIkjUg5YWr6YeN5rSy5LqU44OO5LqU44OT44Or!5e0!3m2!1sen!2sjp!4v1645610665224!5m2!1sen!2sjp" 
+											width="600"
+											height="450"
+											style="border:0;" 
+											allowfullscreen=""
+											loading="lazy"
+											aria-hidden="false"
+											tabindex="0">
+											</iframe>
+								</div>
+								</div>
+							</section>
+						
 				<!-- Contact -->
 					<section id="contact">
 						<div class="inner">
@@ -177,7 +182,6 @@
 					</footer>
 
 			</div>
-
 
 		<!-- Scripts -->
 			<script src="{% static 'js/jquery.min.js' %}"></script>

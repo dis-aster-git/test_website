@@ -2,7 +2,7 @@
 <link rel="icon" href="{% static 'images/logo.png' %}">
 <html>
 	<head>
-		<title>Aster</title>
+		<title>NEWS @ ASTER</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="{% static 'css/main.css' %}" />
@@ -14,115 +14,60 @@
 			<div id="wrapper">
 
 				<!-- Header -->
-						<header id="header" class="alt">
+					<header id="header" class="alt">
 						<a href="{% url 'home' %}" class="logo">
 						<img src="{% static 'images/logo1.png' %}" alt="logo" style="width:95px;height:50px;"> 
 						 </a>
 						<nav>
 						<nav>
-						<a href="{% url 'home_jp' %}">日本語</a>
 							<a href="#menu">Menu</a>
 						</nav>
 					</header>
 
 				<!-- Menu -->
-					<nav id="menu">
-						<ul class="links">
-							<li><a href="{% url 'home' %}">HOME</a></li>
-							<li><a href="{% url 'about' %}">ABOUT US</a></li>
-							<li><a href="{% url 'tech' %}">OUR TECHNOLOGY</a></li>
-							<li><a href="{% url 'team' %}">OUR TEAM</a></li>
-							<li><a href="{% url 'overview' %}">COMPANY OVERVIEW</a></li>
-							<li><a href="#contact">CONTACT US</a></li>
-							<li><a href="{% url 'error' %}">SUPPORT OUR CAUSE</a></li>
-						</ul>
-						<ul class="actions stacked">
-							<li><a href="{% url 'error' %}" class="button fit">Log In</a></li>
-						</ul>
-					</nav>
-				
-				<!-- Banner -->
-				<!-- Note: The "styleN" class below should match that of the header element. -->
-				<section id="banner" class="major">
-					<div class="inner">
-						<span class="image">
-							<img src="{% static 'images/italyEQ.jpg' %}" alt="ItalyEQ">
-						</span>
-						<header class="major">
-							<h2>Protecting our future against natural disasters</h2>
-						</header>
-						<div class="content">
-							<ul class="actions">
-								<li><a href="#one" class="button next scrolly">Get Started</a></li>
-							</ul>
-						</div>
-					</div>
-				</section>
+				<nav id="menu">
+					<ul class="links">
+						<li><a href="{% url 'home' %}">HOME</a></li>
+						<li><a href="{% url 'about' %}">ABOUT US</a></li>
+						<li><a href="{% url 'tech' %}">OUR TECHNOLOGY</a></li>
+						<li><a href="{% url 'team' %}">OUR TEAM</a></li>
+						<li><a href="{% url 'overview' %}">COMPANY OVERVIEW</a></li>
+						<li><a href="#contact">CONTACT US</a></li>
+						<li><a href="{% url 'error' %}">SUPPORT OUR CAUSE</a></li>
+					</ul>
+					<ul class="actions stacked">
+						<li><a href="{% url 'error' %}" class="button fit">Log In</a></li>
+					</ul>
+				</nav>
+
 
 				<!-- Main -->
-					<div id="main">
+				{% for post in posts %}
+					<div id="main" class="alt">
 
 						<!-- One -->
-							<section id="one" class="tiles">
-								<article>
-									<span class="image">
-										<img src="{% static 'images/EQPhone.jpg' %}" alt="about" />
-									</span>
+							<section id="one">
+								<div class="inner">
 									<header class="major">
-										<h3><a href="{% url 'about' %}" class="link">About us</a></h3>
+										<h1>{{ post.title }}</h1>
 									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="{% static 'images/news_gif.gif' %}" alt="news" />
-									</span>
-									<header class="major">
-										<h3><a href="{% url 'news' %}" class="link">NEWS</a></h3>
-										<p></p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="{% static 'images/phototeam.jpg' %}" alt="team" />
-									</span>
-									<header class="major">
-										<h3><a href="{% url 'team' %}" class="link">Our Team</a></h3>
-									</header>
-								</article>
-								
-								<article>
-									<span class="image">
-										<img src="{% static 'images/logo.png' %}" alt="overview" />
-									</span>
-									<header class="major">
-										<h3><a href="{% url 'overview' %}" class="link">Company Overview</a></h3>
-										<p></p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="{% static 'images/powercoat.png' %}" alt="technology" />
-									</span>
-									<header class="major">
-										<h3><a href="{% url 'tech' %}" class="link">Our Technology</a></h3>
-										<p></p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="{% static 'images/cause.jpg' %}" alt="donate" />
-									</span>
-									<header class="major">
-										<h3><a href="{% url 'error' %}" class="link">Support Our Cause</a></h3>
-										<p></p>
-									</header>
-								</article>
+									
+									<span class="image main">
+									<div style="text-align:center"> 
+									<!-- <iframe width="700" height="420" src={{ post.photo.url }} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+									<img src="{{ post.photo.url }}" />
+										</div>	</span>									
+									<p><strong>
+									{{ post.text|linebreaksbr }}</p>
+									</strong>
+									<p>Published: {{ post.created_date }}</p>
+									<p>Author: {{ post.author }}</p>
+									</div>
 							</section>
 
-						<!-- Two -->
-							
-
 					</div>
+					
+				{% endfor %}
 
 				<!-- Contact -->
 					<section id="contact">
@@ -150,18 +95,18 @@
 								</form>
 							</section>
 							<section class="split">
-								<!-- <section> -->
-									<!-- <div class="contact-method"> -->
-										<!-- <span class="icon solid alt fa-envelope"></span> -->
-										<!-- <h3>Email</h3> -->
-										<!-- <a href="#">information@aster.com</a> -->
-									<!-- </div> -->
-								<!-- </section> -->
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-envelope"></span>
+										<h3>Email</h3>
+										<a href="#">information@aster.com</a>
+									</div>
+								</section>
 								<section>
 									<div class="contact-method">
 										<span class="icon solid alt fa-phone"></span>
 										<h3>Phone</h3>
-										<span>+81-(0)55-925-0063</span>
+										<span>(080)12345678</span>
 									</div>
 								</section>
 								<section>
@@ -188,7 +133,7 @@
 								<li><a href="https://www.linkedin.com/company/dis-aster" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 							</ul>
 							<ul class="copyright">
-								<li>&copy; Copyright © 2022 株式会社 Aster</li>
+								<li>&copy; Copyright © 2022 株式会社 Aster.</li>
 							</ul>
 						</div>
 					</footer>

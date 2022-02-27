@@ -24,6 +24,9 @@ def team(request):
 def tech(request):
     return render(request, 'home/tech.html', {})
 
+def overview(request):
+    return render(request, 'home/overview.html', {})
+
 def error(request):
     return render(request, 'home/error.html', {})
 
@@ -33,3 +36,15 @@ def news(request):
 
 def home_jp(request):
     return render(request, 'home/index_jp.html', {})
+
+def about_jp(request):
+    return render(request, 'home/about_jp.html', {})
+    
+def team_jp(request):
+    return render(request, 'home/team_jp.html', {})
+    
+def tech_jp(request):
+    return render(request, 'home/tech_jp.html', {})
+
+def overview_jp(request):
+    return render(request, 'home/overview_jp.html', {})

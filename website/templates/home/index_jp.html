@@ -30,12 +30,13 @@
 				<!-- Menu -->
 					<nav id="menu">
 						<ul class="links">
-							<li><a href="{% url 'home' %}">ホーム</a></li>
-							<li><a href="{% url 'about' %}">会社概要</a></li>
-							<li><a href="{% url 'tech' %}">テクノロジー</a></li>
-							<li><a href="{% url 'team' %}">チーム</a></li>
+							<li><a href="{% url 'home_jp' %}">ホーム</a></li>
+							<li><a href="{% url 'about_jp' %}">会社紹介</a></li>
+							<li><a href="{% url 'tech_jp' %}">テクノロジー</a></li>
+							<li><a href="{% url 'team_jp' %}">チーム</a></li>
+							<li><a href="{% url 'overview_jp' %}">会社概要</a></li>
 							<li><a href="#contact">お問い合わせ</a></li>
-							<li><a href="{% url 'support' %}">世界を守ろう</a></li>
+							<li><a href="{% url 'error' %}">世界を守ろう</a></li>
 						</ul>
 						<ul class="actions stacked">
 							<li><a href="{% url 'error' %}" class="button fit">ログイン</a></li>
@@ -47,7 +48,7 @@
 				<section id="banner" class="major">
 					<div class="inner">
 						<span class="image">
-							<img src="{% static 'images/home.jpg' %}" alt="team" />
+							<img src="{% static 'images/italyEQ.jpg' %}" alt="ItalyEQ">
 						</span>
 						<header class="major">
 							<h2>自然災害から私たちの未来を守る</h2>
@@ -67,10 +68,37 @@
 							<section id="one" class="tiles">
 								<article>
 									<span class="image">
-										<img src="{% static 'images/EQPhone.jpg' %}" alt="about" />
+										<img src="{% static 'images/EQPhone.jpg' %}" alt="about_jp" />
 									</span>
 									<header class="major">
-										<h3><a href="{% url 'about' %}" class="link">会社概要</a></h3>
+										<h3><a href="{% url 'about_jp' %}" class="link">会社紹介</a></h3>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="{% static 'images/news_gif.gif' %}" alt="news" />
+									</span>
+									<header class="major">
+										<h3><a href="{% url 'news' %}" class="link">ニュース</a></h3>
+										<p></p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="{% static 'images/phototeam.jpg' %}" alt="team_jp" />
+									</span>
+									<header class="major">
+										<h3><a href="{% url 'team_jp' %}" class="link">チーム</a></h3>
+									</header>
+								</article>
+								
+								<article>
+									<span class="image">
+										<img src="{% static 'images/logo.png' %}" alt="overview_jp" />
+									</span>
+									<header class="major">
+										<h3><a href="{% url 'overview_jp' %}" class="link">会社概要</a></h3>
+										<p></p>
 									</header>
 								</article>
 								<article>
@@ -78,34 +106,7 @@
 										<img src="{% static 'images/powercoat.png' %}" alt="technology" />
 									</span>
 									<header class="major">
-										<h3><a href="{% url 'tech' %}" class="link">テクノロジー</a></h3>
-										<p></p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="{% static 'images/phototeam.jpg' %}" alt="team" />
-									</span>
-									<header class="major">
-										<h3><a href="{% url 'team' %}" class="link">チーム</a></h3>
-									</header>
-								</article>
-								
-								<article>
-									<span class="image">
-										<img src="{% static 'images/disaster.jpg' %}" alt="disaster" />
-									</span>
-									<header class="major">
-										<h3><a href="{% url 'data' %}" class="link">災害データ</a></h3>
-										<p></p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="{% static 'images/news.jpg' %}" alt="news" />
-									</span>
-									<header class="major">
-										<h3><a href="{% url 'news' %}" class="link">ニュース</a></h3>
+										<h3><a href="{% url 'tech_jp' %}" class="link">テクノロジー</a></h3>
 										<p></p>
 									</header>
 								</article>
@@ -132,7 +133,7 @@
 								<form method="post" action="#">
 									<div class="fields">
 										<div class="field half">
-											<label for="name">名</label>
+											<label for="name">氏名</label>
 											<input style="border: 2px solid #9bf1ff"type="text" name="name" id="name" />
 										</div>
 										<div class="field half">
@@ -151,18 +152,18 @@
 								</form>
 							</section>
 							<section class="split">
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-envelope"></span>
-										<h3>メール</h3>
-										<a href="#">information@aster.com</a>
-									</div>
-								</section>
+								<!-- <section> -->
+									<!-- <div class="contact-method"> -->
+										<!-- <span class="icon solid alt fa-envelope"></span> -->
+										<!-- <h3>メール</h3> -->
+										<!-- <a href="#">information@aster.com</a> -->
+									<!-- </div> -->
+								<!-- </section> -->
 								<section>
 									<div class="contact-method">
 										<span class="icon solid alt fa-phone"></span>
 										<h3>電話番号（代表）</h3>
-										<span>(080)12345678</span>
+										<span>+81-(0)55-925-0063</span>
 									</div>
 								</section>
 								<section>
@@ -182,14 +183,14 @@
 					<footer id="footer">
 						<div class="inner">
 							<ul class="icons">
-								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://twitter.com/dis_aster__" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="https://www.facebook.com/Aster-Co-Ltd-102878115674292" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="https://www.instagram.com/dis_aster_official/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="https://github.com/dis-aster-git" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://www.linkedin.com/company/dis-aster" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 							</ul>
 							<ul class="copyright">
-								<li>&copy; Copyright © 2020 株式会社 Aster</li>
+								<li>&copy; Copyright © 2022 株式会社 Aster</li>
 							</ul>
 						</div>
 					</footer>

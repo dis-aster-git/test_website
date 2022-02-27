@@ -2,7 +2,7 @@
 <link rel="icon" href="{% static 'images/logo.png' %}">
 <html>
 	<head>
-		<title>OUR TEAM @ ASTER</title>
+		<title>Team</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="{% static 'css/main.css' %}" />
@@ -20,6 +20,7 @@
 						<img src="{% static 'images/logo1.png' %}" alt="logo" style="width:95px;height:50px;"> 
 						</a>
 						<nav>
+						<a href="{% url 'team_jp' %}">日本語</a>
 							<a href="#menu">Menu</a>
 						</nav>
 					</header>
@@ -31,8 +32,9 @@
 							<li><a href="{% url 'about' %}">ABOUT US</a></li>
 							<li><a href="{% url 'tech' %}">OUR TECHNOLOGY</a></li>
 							<li><a href="{% url 'team' %}">OUR TEAM</a></li>
+							<li><a href="{% url 'overview' %}">COMPANY OVERVIEW</a></li>
 							<li><a href="#contact">CONTACT US</a></li>
-							<li><a href="{% url 'support' %}">SUPPORT OUR CAUSE</a></li>
+							<li><a href="{% url 'error' %}">SUPPORT OUR CAUSE</a></li>
 						</ul>
 						<ul class="actions stacked">
 							<li><a href="{% url 'error' %}" class="button fit">Log In</a></li>
@@ -63,7 +65,7 @@
 									<header class="major">
 										<h2>ABOUT OUR TEAM</h2>
 									</header>
-									<p>Our vision is to build a world in which all people can live in safety and security against natural disasters.A private building renovation engineer, an earthquake researcher from the University of Tokyo, and a structural analysis researcher from the Indian Institute of Technology stood up to create a safer world.</p>
+									<p>Our vision is to build a world in which all people can live in safety and securely against natural disasters. Our team comprises of members who have years of experience in the field of disaster risk reduction.</p>
 								</div>
 							</section>
 
@@ -102,13 +104,14 @@
 											</header>
 											<p>
 											<strong>Fields of expertise:</strong><br>
-											1. Development of structural analysis methods<br>
-											2. A network of alumni of the Indian Institute of Technology to the Indian business community<br>
+											1. Over a decade of experience in the fiel of Earthquake Engineering <br>
+											2. Specialising in numerical simulation and structural design<br>
 											3. IoT technology development<br>
 											<strong>Career history:</strong><br>
-											1. Graduated from the Indian Institute of Technology<br>
+											1. Graduated as a Structural Engineer from the Indian Institute of Technology Madras<br>
 											2. Obtained a Doctorate in engineering from the University of Tokyo<br>
-											3. Engaged in system development at Structural Planning Institute Co.</p>
+											3. Engaged in system development at Kozo Keikaku Engineering
+											4. Catastrophe Risk Analyst at Willis Re </p>
 											<ul class="actions">
 												</ul>
 										</div>
@@ -139,13 +142,13 @@
 							</section>
 
 						<!-- Three -->
-							<section id="three">
-								<div class="inner">
-                                    <ul class="actions">
-                                        <li><a href="generic.html" class="button">Message from founders</a></li>
-                                    </ul>
-								</div>
-							</section>
+							<!-- <section id="three"> -->
+								<!-- <div class="inner"> -->
+                                    <!-- <ul class="actions"> -->
+                                        <!-- <li><a href="generic.html" class="button">Message from founders</a></li> -->
+                                    <!-- </ul> -->
+								<!-- </div> -->
+							<!-- </section> -->
 
 					</div>
 
@@ -175,18 +178,18 @@
 								</form>
 							</section>
 							<section class="split">
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-envelope"></span>
-										<h3>Email</h3>
-										<a href="#">information@aster.com</a>
-									</div>
-								</section>
+								<!-- <section> -->
+									<!-- <div class="contact-method"> -->
+										<!-- <span class="icon solid alt fa-envelope"></span> -->
+										<!-- <h3>Email</h3> -->
+										<!-- <a href="#">information@aster.com</a> -->
+									<!-- </div> -->
+								<!-- </section> -->
 								<section>
 									<div class="contact-method">
 										<span class="icon solid alt fa-phone"></span>
 										<h3>Phone</h3>
-										<span>(080)12345678</span>
+										<span>+81-(0)55-925-0063</span>
 									</div>
 								</section>
 								<section>
@@ -206,14 +209,14 @@
 					<footer id="footer">
 						<div class="inner">
 							<ul class="icons">
-								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://twitter.com/dis_aster__" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="https://www.facebook.com/Aster-Co-Ltd-102878115674292" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="https://www.instagram.com/dis_aster_official/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="https://github.com/dis-aster-git" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://www.linkedin.com/company/dis-aster" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 							</ul>
 							<ul class="copyright">
-								<li>&copy; Copyright © 2020 株式会社 Aster.</li>
+								<li>&copy; Copyright © 2022 株式会社 Aster.</li>
 							</ul>
 						</div>
 					</footer>
