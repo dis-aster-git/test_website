@@ -44,17 +44,9 @@
 			}
 		</style>
   </head>
-		<div class="container">
-			<h1>News</h1>
-		<ul class="data-list" data-autoscroll>
-			{% for post in posts %}
-			<li>
-			<a href="#carousel_591a" style="color:white"  role="button" data-u-slide-to="{{forloop.counter0}}">{{ post.title }}</a>
-			</li>
-		  {% endfor %}
-		</ul>
-	</div>
+
  <body style="background-color:#000000;">
+		
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -86,6 +78,16 @@
 						</ul>
 					</nav>
 		</div>
+		<div class="container">
+			<h1>News</h1>
+		<ul class="data-list" data-autoscroll>
+			{% for post in posts %}
+			<li>
+			<a href="#carousel_591a" style="color:white"  role="button" data-u-slide-to="{{forloop.counter0}}">{{ post.title }}</a>
+			</li>
+		  {% endfor %}
+		</ul>
+	</div>
 
   <body class="u-body u-xl-mode">
     <section id="carousel_591a" class="u-carousel u-slide u-valign-middle u-block-18c8-1" data-u-ride="carousel" data-interval="5000">
