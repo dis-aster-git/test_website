@@ -106,6 +106,7 @@
           <div class="u-clearfix u-sheet u-sheet-1">
             <div class="u-clearfix u-expanded-width u-gutter-10 u-layout-wrap u-layout-wrap-1">
               <div class="u-layout" style="">
+			  <h2 class="u-align-center u-custom-font u-font-merriweather u-text u-text-3">{{ post.title }}</h2>
                 <div class="u-layout-row" style="">
                   <div class="u-align-left u-container-style u-image u-layout-cell u-left-cell u-size-30 u-size-xs-60 u-image-1" src="">
 						<span class="background-image">
@@ -116,7 +117,7 @@
                   </div>
                   <div class="u-container-style u-layout-cell u-right-cell u-size-30 u-size-xs-60 u-layout-cell-2">
                     <div class="u-container-layout u-valign-middle u-container-layout-2">
-                      <h2 class="u-align-center u-custom-font u-font-merriweather u-text u-text-2">{{ post.title }}</h2>
+                      <!-- <h2 class="u-align-center u-custom-font u-font-merriweather u-text u-text-3">{{ post.title }}</h2> -->
                       <p class="u-align-center u-text u-text-3">{{ post.text|linebreaksbr }}</p>
 					{% if post.link != " " %}
 					<a href="{{ post.link }}">{{ post.link }}</a>
@@ -159,8 +160,6 @@
 	  {% endfor %}
     </section>
 	
-	<a href="#carousel_591a" style="color:white"  role="button" data-u-slide="next">NEXT</a>
-	<a href="#carousel_591a" style="color:white"  role="button" data-u-slide-to="1">NEXT2</a>
 		<!-- Scripts -->
 		<script src="{% static 'js/jquery.js' %}"></script>
 		<script src="{% static 'js/nicepage.js' %}"></script>
