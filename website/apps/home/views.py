@@ -31,7 +31,7 @@ def error(request):
     return render(request, 'home/error.html', {})
 
 def news(request):
-    posts = Post.objects.filter(created_date__lte=timezone.now()).order_by('created_date')
+    posts = Post.objects.filter(created_date__lte=timezone.now()).order_by('-created_date')
     return render(request, 'home/news.html',  {'posts': posts})
 
 def home_jp(request):
